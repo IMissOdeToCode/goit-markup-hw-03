@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./css/styles.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,118 +12,135 @@
 			rel="stylesheet"
 		/>
 
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+			integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="./css/styles.css" />
+
 		<title>WebStudio</title>
 	</head>
 
 	<body>
 		<!--navigation-->
 		<header>
-			<nav>
-				<!-- prettier-ignore -->
-				<a href="./index.html" class="link" rel="noopener noreferrer nofolow">
+			<div class="container">
+				<nav>
+					<!-- prettier-ignore -->
+					<a href="./index.html" class="link" rel="noopener noreferrer nofolow">
 					<span class="logo">Web</span><span class="logo top">Studio</span>
-				</a>
-				<ul class="site-nav list">
+					</a>
+
+					<ul class="site-nav list">
+						<li>
+							<a href="./index.html" class="current link" target="_self" rel="noopener noreferrer nofolow">Студия</a>
+						</li>
+						<li>
+							<a href="./portfolio.html" class="link" target="_self" rel="noopener noreferrer nofolow">Портфолио</a>
+						</li>
+						<li>
+							<a href="" class="link" target="_self" rel="noopener noreferrer nofolow">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul class="contact-nav list">
 					<li>
-						<a href="./index.html" class="current link" target="_self" rel="noopener noreferrer nofolow">Студия</a>
+						<a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
 					</li>
 					<li>
-						<a href="./portfolio.html" class="link" target="_self" rel="noopener noreferrer nofolow">Портфолио</a>
-					</li>
-					<li>
-						<a href="" class="link" target="_self" rel="noopener noreferrer nofolow">Контакты</a>
+						<a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
 					</li>
 				</ul>
-			</nav>
-
-			<ul class="contact-nav list">
-				<li>
-					<a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
-				</li>
-				<li>
-					<a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
-				</li>
-			</ul>
+			</div>
 		</header>
 
 		<main>
 			<!--hero-->
-			<section>
+			<section class="section">
 				<div class="hero-rect">
 					<!-- prettier-ignore -->
 					<h1 class="hero-title">
 					Эффективные решения для вашего бизнеса
 					</h1>
-					<button type="button" class="button hero">Заказать услугу</button>
+					<button type="button" class="button hero-button">Заказать услугу</button>
 				</div>
 			</section>
 
 			<!--features-->
-			<section class="features">
-				<h2 class="hidden">Особенности</h2>
-				<ul class="list">
-					<li>
-						<h3 class="features-title">Внимание к деталям</h3>
-						<p class="features-text">
-							Идейные соображения, а также начало повседневной работы по формированию позиции.
-						</p>
-					</li>
-					<li>
-						<h3 class="features-title">Пунктуальность</h3>
-						<p class="features-text">
-							Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
-						</p>
-					</li>
-					<li>
-						<h3 class="features-title">Планирование</h3>
-						<p class="features-text">
-							Равным образом консультация с широким активом в значительной степени обуславливает.
-						</p>
-					</li>
-					<li>
-						<h3 class="features-title">Современные технологии</h3>
-						<p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-					</li>
-				</ul>
+			<section class="section">
+				<div class="container">
+					<h2 class="hidden">Особенности</h2>
+					<ul class="list">
+						<li>
+							<h3 class="features-title">Внимание к деталям</h3>
+							<p class="features-text">
+								Идейные соображения, а также начало повседневной работы по формированию позиции.
+							</p>
+						</li>
+						<li>
+							<h3 class="features-title">Пунктуальность</h3>
+							<p class="features-text">
+								Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+							</p>
+						</li>
+						<li>
+							<h3 class="features-title">Планирование</h3>
+							<p class="features-text">
+								Равным образом консультация с широким активом в значительной степени обуславливает.
+							</p>
+						</li>
+						<li>
+							<h3 class="features-title">Современные технологии</h3>
+							<p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<!--what_are_we_doing-->
-			<section>
-				<h2 class="section-title">Чем мы занимаемся</h2>
-				<ul class="list">
-					<li>
-						<img src="./images/hands-on-keyboard.jpg" alt="написание программы" width="370" height="294" />
-					</li>
-					<li>
-						<img src="./images/smartphones.jpg" alt="дизайн приложения" width="370" height="294" />
-					</li>
-					<li>
-						<img src="./images/graphic-palette.jpg" alt="подбор цветовой гаммы" width="370" height="294" />
-					</li>
-				</ul>
+			<section class="section">
+				<div class="container">
+					<h2 class="section-title">Чем мы занимаемся</h2>
+					<ul class="list">
+						<li class="list-item">
+							<img src="./images/hands-on-keyboard.jpg" alt="написание программы" width="370" height="294" />
+						</li>
+						<li class="list-item">
+							<img src="./images/smartphones.jpg" alt="дизайн приложения" width="370" height="294" />
+						</li>
+						<li class="list-item">
+							<img src="./images/graphic-palette.jpg" alt="подбор цветовой гаммы" width="370" height="294" />
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<!--our_team-->
-			<section>
-				<div class="team">
+			<section class="section">
+				<div class="container team">
 					<h2 class="section-title">Наша команда</h2>
 					<ul class="list">
-						<li>
+						<li class="card">
 							<img src="./images/img-1.jpg" alt="Игорь Демьяненко Product Designer" width="270" height="260" />
 							<h3 class="card-title">Игорь Демьяненко</h3>
 							<p class="card-descr">Product Designer</p>
 						</li>
-						<li>
+						<li class="card">
 							<img src="./images/img-2.jpg" alt="Ольга Репина Frontend Developer" width="270" height="260" />
 							<h3 class="card-title">Ольга Репина</h3>
 							<p class="card-descr">Frontend Developer</p>
 						</li>
-						<li>
+						<li class="card">
 							<img src="./images/img-3.jpg" alt="Николай Тарасов Marketing" width="270" height="260" />
 							<h3 class="card-title">Николай Тарасов</h3>
 							<p class="card-descr">Marketing</p>
 						</li>
-						<li>
+						<li class="card">
 							<img src="./images/img-4.jpg" alt="Михаил Ермаков UI Designer" width="270" height="260" />
 							<h3 class="card-title">Михаил Ермаков</h3>
 							<p class="card-descr">UI Designer</p>
@@ -135,11 +151,11 @@
 		</main>
 
 		<!--footer-->
-		<div class="page-footer">
-			<footer>
+		<footer class="page-footer">
+			<div class="container">
 				<!-- prettier-ignore -->
 				<a href="./index.html" class="link" rel="noopener noreferrer nofolow">
-					<span class="logo">Web</span><span class="logo bot">Studio</span>
+				<span class="logo">Web</span><span class="logo bot">Studio</span>
 			</a>
 				<address>
 					<ul class="list">
@@ -154,7 +170,7 @@
 						</li>
 					</ul>
 				</address>
-			</footer>
-		</div>
+			</div>
+		</footer>
 	</body>
 </html>

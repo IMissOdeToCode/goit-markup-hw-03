@@ -1,3 +1,29 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+} */
+
+ul,
+ol {
+	margin: 0;
+	padding-left: 0;
+}
+
+a {
+	color: currentColor;
+}
+
 :root {
 	/* bc - brand color */
 	--bc-blue: #2196f3;
@@ -9,6 +35,16 @@
 	--bc-light_backgroung: #f5f4fa;
 
 	--bc-semi-white: rgb(255 255 255 / 0.6);
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.section {
+	padding: 94px 0;
 }
 
 body {
@@ -25,6 +61,8 @@ body {
 
 .list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .site-nav .link.current {
@@ -32,10 +70,11 @@ body {
 }
 
 .button {
+	display: inline-block;
 	border-radius: 4px;
-	border-color: transparent;
 	font-family: inherit;
 	cursor: pointer;
+	border: 1px solid transparent;
 }
 
 .hidden {
@@ -69,6 +108,7 @@ body {
 /* ---------- WebStudio ---------- */
 
 /* navigation */
+
 .site-nav,
 .contact-nav {
 	color: var(--bc-light-black);
@@ -91,6 +131,7 @@ body {
 /* hero */
 .hero-rect {
 	background-color: var(--bc-background);
+	text-align: center;
 }
 
 .hero-title {
@@ -98,30 +139,32 @@ body {
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
-	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+
+	margin-top: 0;
+	margin-bottom: 30px;
 }
 
-.button.hero {
+.hero-button {
 	color: var(--bc-white);
 	background-color: var(--bc-blue);
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.88;
-	/* display: flex;
-	align-items: center; */
 	text-align: center;
 	letter-spacing: 0.06em;
-	width: 200px;
-	height: 50px;
+
+	min-width: 200px;
+	min-height: 50px;
+	padding: 10px 32px;
 }
 
-.hero:hover,
-.hero:focus {
+.hero-button:hover,
+.hero-button:focus {
 	color: var(--bc-blue);
 	background-color: var(--bc-white);
-	border-color: transparent;
+	border: 1px solid var(--bc-blue);
 }
 
 /* features */
@@ -131,10 +174,15 @@ body {
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
+
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 .features-text {
 	font-size: 14px;
 	line-height: 1.71;
+
+	margin: 0;
 }
 
 /* what_are_we_doing */
@@ -144,6 +192,14 @@ body {
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
+
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+.list-item {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
 }
 
 /* our_team */
@@ -159,16 +215,29 @@ body {
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
+
+	margin: 30px 0 10px 0;
+	padding: 0;
 }
 .card-descr {
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
+
+	margin: 0;
+	padding: 0;
+}
+.card {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	padding-bottom: 30px;
 }
 
 /* footer */
 .page-footer {
 	background-color: var(--bc-background);
+	padding: 60px 0;
 }
 
 .page-footer .link {
