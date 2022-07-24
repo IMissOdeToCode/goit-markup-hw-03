@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+img {
+	display: block;
+	/* min-width: 100%;
+	height: auto; */
+}
+
 .b1 {
 	outline: 1px dashed tomato;
 	/* font-size: 0; */
@@ -46,12 +52,15 @@ a {
 	--bc-header-line: #ececec;
 
 	--bc-semi-white: rgb(255 255 255 / 0.6);
+
+	--card-set-gap: 30px;
 }
 
 .container {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+	/* outline: 1px dashed teal; */
 }
 
 .section {
@@ -182,6 +191,8 @@ nav {
 .main-nav {
 	display: flex;
 	align-items: center;
+}
+.line {
 	border-bottom: 1px solid var(--bc-header-line);
 }
 
@@ -328,9 +339,21 @@ nav {
 
 /* filter */
 .buttons-block {
+	display: flex;
+	justify-content: center;
+
 	margin-bottom: 50px;
 	/* outline: 1px solid teal; */
 }
+
+.buttons-block .item + .item {
+	margin-left: 8px;
+}
+
+/* .buttons-block .item:not(:last-child) {
+	margin-right: 8px;
+} */
+
 .button.filter {
 	color: var(--bc-light-black);
 	background-color: var(--bc-light_backgroung);
@@ -343,8 +366,6 @@ nav {
 	padding: 6px 22px;
 	min-width: 73px;
 	min-height: 38px;
-
-	/* outline: 1px dashed tomato; */
 }
 
 /* пока смена фона чеpеp hover */
@@ -362,7 +383,7 @@ nav {
 	line-height: 2;
 	letter-spacing: 0.06em;
 
-	margin-top: 20px;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
@@ -374,8 +395,33 @@ nav {
 	margin-top: 4px;
 	margin-bottom: 0;
 }
-.result-card {
+
+.gallery-container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card-set {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+
+	margin-top: calc(-1 * var(--card-set-gap));
+	margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.card-set > .result-card {
+	flex-basis: calc(100% / 3 - var(--card-set-gap));
+	margin-left: var(--card-set-gap);
+	margin-top: var(--card-set-gap);
+}
+
+.result-descr {
 	border: 1px solid #eeeeee;
-	border: 1px solid teal;
-	padding-bottom: 30px;
+
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
