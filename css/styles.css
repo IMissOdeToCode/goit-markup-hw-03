@@ -59,6 +59,10 @@ a {
 	padding: 94px 0;
 }
 
+.no-padding {
+	padding-top: 0;
+}
+
 body {
 	color: var(--bc-gray);
 	background-color: var(--bc-white);
@@ -348,6 +352,10 @@ nav {
 	color: var(--bc-semi-white);
 }
 
+.address-item {
+	line-height: 1.71;
+}
+
 .list .address-item + .address-item {
 	margin-top: 9px;
 }
@@ -445,7 +453,9 @@ nav {
 }
 
 .result-descr {
-	border: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
 
 	padding-left: 24px;
 	padding-right: 24px;
